@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <script src="face-api.js"></script>
   <script src="js/commons.js"></script>
@@ -10,6 +11,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </head>
+
 <body>
   <div id="navbar"></div>
   <div class="center-content page-container">
@@ -40,10 +42,7 @@
         <label for="imgUrlInput">Get image from URL:</label>
         <input id="imgUrlInput" type="text" class="bold">
       </div>
-      <button
-        class="waves-effect waves-light btn"
-        onclick="loadImageFromUrl()"
-      >
+      <button class="waves-effect waves-light btn" onclick="loadImageFromUrl()">
         Ok
       </button>
       <!-- image_selection_control -->
@@ -56,16 +55,10 @@
           <label for="minConfidence">Min Confidence:</label>
           <input disabled value="0.5" id="minConfidence" type="text" class="bold">
         </div>
-        <button
-          class="waves-effect waves-light btn"
-          onclick="onDecreaseMinConfidence()"
-        >
+        <button class="waves-effect waves-light btn" onclick="onDecreaseMinConfidence()">
           <i class="material-icons left">-</i>
         </button>
-        <button
-          class="waves-effect waves-light btn"
-          onclick="onIncreaseMinConfidence()"
-        >
+        <button class="waves-effect waves-light btn" onclick="onIncreaseMinConfidence()">
           <i class="material-icons left">+</i>
         </button>
       </div>
@@ -91,16 +84,10 @@
           <label for="scoreThreshold">Score Threshold:</label>
           <input disabled value="0.5" id="scoreThreshold" type="text" class="bold">
         </div>
-        <button
-          class="waves-effect waves-light btn"
-          onclick="onDecreaseScoreThreshold()"
-        >
+        <button class="waves-effect waves-light btn" onclick="onDecreaseScoreThreshold()">
           <i class="material-icons left">-</i>
         </button>
-        <button
-          class="waves-effect waves-light btn"
-          onclick="onIncreaseScoreThreshold()"
-        >
+        <button class="waves-effect waves-light btn" onclick="onIncreaseScoreThreshold()">
           <i class="material-icons left">+</i>
         </button>
       </div>
@@ -114,16 +101,10 @@
           <label for="minFaceSize">Minimum Face Size:</label>
           <input disabled value="20" id="minFaceSize" type="text" class="bold">
         </div>
-        <button
-          class="waves-effect waves-light btn"
-          onclick="onDecreaseMinFaceSize()"
-        >
+        <button class="waves-effect waves-light btn" onclick="onDecreaseMinFaceSize()">
           <i class="material-icons left">-</i>
         </button>
-        <button
-          class="waves-effect waves-light btn"
-          onclick="onIncreaseMinFaceSize()"
-        >
+        <button class="waves-effect waves-light btn" onclick="onIncreaseMinFaceSize()">
           <i class="material-icons left">+</i>
         </button>
       </div>
@@ -164,7 +145,7 @@
       updateResults()
     }
 
-    $(document).ready(function() {
+    $(document).ready(function () {
       renderNavBar('#navbar', 'face_extraction')
       initImageSelectionControls()
       initFaceDetectionControls()
@@ -172,4 +153,5 @@
     })
   </script>
 </body>
+
 </html>

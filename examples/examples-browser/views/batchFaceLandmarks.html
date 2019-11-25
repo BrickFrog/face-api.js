@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <script src="face-api.js"></script>
   <script src="js/commons.js"></script>
@@ -9,6 +10,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </head>
+
 <body>
   <div id="navbar"></div>
   <div class="center-content page-container">
@@ -19,22 +21,19 @@
       <div class="row side-by-side">
         <div class="row">
           <label for="timeNoBatch">Time for processing each face seperately:</label>
-          <input disabled value="-" id="timeNoBatch" type="text" class="bold"/>
+          <input disabled value="-" id="timeNoBatch" type="text" class="bold" />
         </div>
         <div class="row">
           <label for="timeBatch">Time for processing in Batch:</label>
-          <input disabled value="-" id="timeBatch" type="text" class="bold"/>
+          <input disabled value="-" id="timeBatch" type="text" class="bold" />
         </div>
       </div>
       <div class="row side-by-side">
         <div>
           <label for="numImages">Num Images:</label>
-          <input id="numImages" type="text" class="bold" value="40"/>
+          <input id="numImages" type="text" class="bold" value="40" />
         </div>
-        <button
-          class="waves-effect waves-light btn"
-          onclick="measureTimingsAndDisplay()"
-        >
+        <button class="waves-effect waves-light btn" onclick="measureTimingsAndDisplay()">
           Ok
         </button>
       </div>
@@ -106,7 +105,7 @@
       measureTimingsAndDisplay()
     }
 
-    $(document).ready(function() {
+    $(document).ready(function () {
       $('#numImages').on('change', onNumImagesChanged)
       renderNavBar('#navbar', 'batch_face_landmarks')
       run()
@@ -115,4 +114,5 @@
   </script>
 
 </body>
+
 </html>

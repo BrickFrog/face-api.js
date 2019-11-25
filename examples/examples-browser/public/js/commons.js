@@ -25,28 +25,32 @@ async function requestExternalImage(imageUrl) {
 function renderNavBar(navbarId, exampleUri) {
   const examples = [
     {
+      uri: 'home',
+      name: 'Readme'
+    },
+    {
       uri: 'face_detection',
-      name: 'Face Detection'
+      name: 'Static Face Detection'
     },
     {
       uri: 'face_landmark_detection',
-      name: 'Face Landmark Detection'
+      name: 'Static Face Landmark Detection'
     },
     {
       uri: 'face_expression_recognition',
-      name: 'Face Expression Recognition'
+      name: 'Static Face Expression Recognition'
     },
     {
       uri: 'age_and_gender_recognition',
-      name: 'Age and Gender Recognition'
+      name: 'Static Age and Gender Recognition'
     },
     {
       uri: 'face_recognition',
-      name: 'Face Recognition'
+      name: 'Static Face Recognition'
     },
     {
       uri: 'face_extraction',
-      name: 'Face Extraction'
+      name: 'Static Face Extraction'
     },
     {
       uri: 'video_face_tracking',
@@ -69,22 +73,6 @@ function renderNavBar(navbarId, exampleUri) {
       name: 'Webcam Age and Gender Recognition'
     },
     {
-      uri: 'bbt_face_landmark_detection',
-      name: 'BBT Face Landmark Detection'
-    },
-    {
-      uri: 'bbt_face_similarity',
-      name: 'BBT Face Similarity'
-    },
-    {
-      uri: 'bbt_face_matching',
-      name: 'BBT Face Matching'
-    },
-    {
-      uri: 'bbt_face_recognition',
-      name: 'BBT Face Recognition'
-    },
-    {
       uri: 'batch_face_landmarks',
       name: 'Batch Face Landmark Detection'
     },
@@ -102,6 +90,7 @@ function renderNavBar(navbarId, exampleUri) {
   pageContainer.insertBefore(header, pageContainer.children[0])
 
   const menuContent = document.createElement('ul')
+  menuContent.style.backgroundColor = "rgb(211,211,211)"
   menuContent.id = 'slide-out'
   menuContent.classList.add('side-nav', 'fixed')
   navbar.appendChild(menuContent)
@@ -119,9 +108,11 @@ function renderNavBar(navbarId, exampleUri) {
   const githubLink = document.createElement('a')
   githubLink.classList.add('waves-effect', 'waves-light', 'side-by-side')
   githubLink.id = 'github-link'
-  githubLink.href = 'https://github.com/justadudewhohacks/face-api.js'
+  githubLink.href = 'https://github.com/brickfrog/face-api.js'
+  githubLink.style.backgroundColor = 'rgb(88,139,174)'
   const h5 = document.createElement('h5')
-  h5.innerHTML = 'face-api.js'
+  h5.innerHTML = 'Vision Demo'
+  h5.style.color = "rgb(255,255,255)"
   githubLink.appendChild(h5)
   const githubLinkIcon = document.createElement('img')
   githubLinkIcon.src = 'github_link_icon.png'
